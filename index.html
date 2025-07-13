@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>歌枠が来たぜ</title>
+        <link rel="stylesheet" href="test.css">
+        <script src="https://www.youtube.com/iframe_api"></script>
+    </head>
+
+    <body>
+        <h1>北見の歌枠プレイヤー</h1>
+        
+        <div class="html">
+            <div class="left">
+                <div id="player"></div>
+            </div>
+            
+            <div class="right">
+                <table class="songs">
+                    <thead>
+                        <tr>
+                            <th>タイトル</th>
+                            <th>アーティスト</th>
+                            <th>再生</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ジダーバグ</td>
+                            <td>ELLEGARDEN</td>
+                            <td><button onclick="playFromTime(70)">▶</button></td>
+                        </tr>
+                        <tr>
+                            <td>愛唄</td>
+                            <td>GReeeeN</td>
+                            <td><button onclick="playFromTime(450)">▶</button></td>
+                        </tr>
+                        <tr>
+                            <td>シャルル</td>
+                            <td>バルーン</td>
+                            <td><button onclick="playFromTime(705)">▶</button></td>
+                        </tr>
+                        <tr>
+                            <td>メリッサ</td>
+                            <td>ポルノグラフィティ</td>
+                            <td><button onclick="playFromTime(1161)">▶</button></td>
+                        </tr>
+                        <tr>
+                            <td>チェリー</td>
+                            <td>スピッツ</td>
+                            <td><button onclick="playFromTime(1449)">▶</button></td>
+                        </tr>
+                        <tr>
+                            <td>猫</td>
+                            <td>DISH//</td>
+                            <td><button onclick="playFromTime(1719)">▶</button></td>
+                        </tr>
+                        <tr>
+                            <td>DANDAN心魅かれてく</td>
+                            <td>FIELD OF VIEW</td>
+                            <td><button onclick="playFromTime(2235)">▶</button></td>
+                        </tr>
+                        <tr>
+                            <td>lemon</td>
+                            <td>米津玄師</td>
+                            <td><button onclick="playFromTime(2466)">▶</button></td>
+                        </tr>
+                        <tr>
+                            <td>Hello,worker</td>
+                            <td>ハヤシケイ（KEI）</td>
+                            <td><button onclick="playFromTime(3055)">▶</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+
+        <script>
+            let player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                videoId: 'NF8U0sTlZ3w', //リンクの=から後ろを入力
+                events: {
+                    'onReady': onPlayerReady
+                }
+                });
+            }
+
+            function onPlayerReady(event) {
+                console.log('Player is ready');
+            }
+
+            function playFromTime(seconds) {
+                player.seekTo(seconds);
+                player.playVideo();
+            }
+        </script>
+    </body>
+</html>
