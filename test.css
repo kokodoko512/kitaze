@@ -10,8 +10,9 @@ body {
 h1 {
     text-align: center;
     background: #e17333;
-    font-family: "游明朝";
+    font-family: "玉ねぎ楷書激無料版v7改";
     color: white;
+    padding: 10px;
 }
 
 .html {
@@ -46,7 +47,6 @@ h1 {
     font-size: 18px;
     background-color: #fff;
     font-family: "游明朝", serif;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
   
 .songs th, .songs td {
